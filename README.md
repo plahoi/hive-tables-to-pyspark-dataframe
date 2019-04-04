@@ -1,5 +1,21 @@
 Converts hive table scheme to pyspark DataFrame scheme
 
+__From this__:
+```sql
+CREATE TABLE `sandbox.phones`(
+      `phone` bigint comment "Additional hive column Comment",
+      `phone_hash` string)
+```
+__To this__:
+```python
+StructType([
+        StructField("phone", LongType()),
+        StructField("phone_hash", StringType()),
+)]
+```
+
+----
+
 ### Example
 Hive "show create table sandbox.phones;" command returns following text:
 ```python
