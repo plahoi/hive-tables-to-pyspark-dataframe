@@ -109,7 +109,7 @@ def generate_schema(data):
 
     '''
     schema_text_headed = 'StructType([\n'
-    schema_text_footer = ')]'
+    schema_text_footer = '])'
     schema_text_body = ''
     
     for column in data:
