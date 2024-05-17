@@ -13,7 +13,7 @@ def get_show_createtable_output(table_name):
         table_name (string): Table name in hive
 
     '''
-    return subprocess.check_output(['hive', '-e', '"show create table {};"'.format(table_name)])
+    return subprocess.check_output(['hive', '-e', '"show create table {};"'.format(table_name)]).decode('utf-8')
 
 def get_pyspark_dtype(dtype):
     ''' Returns pyspark datatype cohered with hive datatypes
